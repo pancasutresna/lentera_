@@ -1,0 +1,20 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t pancasutresna/react-test -f ./client/Dockerfile.dev ./client-web
+
+script:
+  - docker run pancasutresna/react-test npm test -- --coverage
+
+after_success:
+  - docker build -t pancasutresna/lentera-client-web ./client-web
+  - docker build -t pancasutresna/lentera-nginx ./nginx
+  - docker build -t pancasutresna/lentera-server-api ./server-api
+# Login to the docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+# Push images to docker hub
+  - docker push pancasutresna/lentera-client-web
+  - docker push pancasutresna/lentera-nginx
+  - docker push pancasutresna/lentera-server-api
