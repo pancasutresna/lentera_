@@ -18,3 +18,16 @@ after_success:
   - docker push pancasutresna/lentera-client-web
   - docker push pancasutresna/lentera-nginx
   - docker push pancasutresna/lentera-server-api
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: lentera
+  env: Lentera-env
+  bucket_name: elasticbeanstalk-us-east-2-855994007022
+  bucket_path: lentera
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: 
+    secure: $AWS_SECRET_KEY

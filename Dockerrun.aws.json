@@ -1,0 +1,33 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+        {
+            "name": "client-web",
+            "image": "pancasutresna/lentera-client-web",
+            "hostname": "client-web",
+            "essential": false
+        },
+        {
+            "name": "server-api",
+            "image": "pancasutresna/lentera-server-api",
+            "hostname": "server-api",
+            "essential": false
+        },
+        {
+            "name": "nginx",
+            "image": "pancasutresna/lentera-nginx",
+            "hostname": "nginx",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ],
+            "links": [
+                "client-web",
+                "server-api"
+            ]
+        }
+    ]
+}

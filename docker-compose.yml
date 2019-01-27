@@ -2,6 +2,8 @@ version: '3'
 services: 
   mongo:
     image: 'mongo:latest'
+  redis:
+    image: 'redis:latest'
   nginx:
     restart: always
     build:
@@ -17,6 +19,8 @@ services:
       - /app/node_modules
       - ./server-api:/app
     environment:
+      - REDIS_HOTS=redis
+      - REDIS_PORT=6379
       - MONGO_HOST=mongo
       - MONGO_PORT=27017
       - MONGO_USER=root
