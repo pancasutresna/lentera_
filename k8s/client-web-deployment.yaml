@@ -1,8 +1,7 @@
 apiVersion: apps/v1
-kind: apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: client-deployment
+  name: client-web-deployment
 spec:
   replicas: 3
   selector: 
@@ -10,11 +9,11 @@ spec:
       component: web
   template:
     metadata:
-      label:
+      labels:
         component: web
     spec:
       containers:
-        - name: client
+        - name: client-web
           image: pancasutresna/lentera-client-web
           ports:
             - containerPort: 3000
