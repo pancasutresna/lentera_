@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import OtherPage from './OtherPage';
-import Fib from './Fib';
+//import Fib from './Fib';
 import TodoList from './components/todos/TodoList';
 import TodoCreate from './components/todos/TodoCreate';
 import TodoDelete from './components/todos/TodoDelete';
@@ -18,7 +18,7 @@ class App extends Component {
         <Router>
           <div>
             <Header />
-            <Route exact path="/" component={Fib} />
+            {/* <Route exact path="/" component={Fib} /> */}
             <Route path="/" component={TodoList} />
             <Route path="/todos/new" component={TodoCreate} />
             <Route path="/todos/edit" component={TodoEdit} />
