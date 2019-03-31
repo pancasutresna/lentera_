@@ -3,7 +3,7 @@ import './App.css';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import OtherPage from './OtherPage';
 //import Fib from './Fib';
-import TodoList from './components/todos/TodoList';
+import PhotonList from './components/core/photon/PhotonList';
 import PhotonCreate from './components/core/photon/PhotonCreate';
 import TodoDelete from './components/todos/TodoDelete';
 import TodoEdit from './components/todos/TodoEdit';
@@ -19,8 +19,8 @@ class App extends Component {
           <div>
             <Header />
             {/* <Route exact path="/" component={Fib} /> */}
-            <Route path="/" component={TodoList} exact />
-            <Route path="/photon/new" component={PhotonCreate} />
+            <Route path="/" component={PhotonList} exact />
+            <Route path="/photons/new" component={PhotonCreate} />
             <Route path="/todos/edit" component={TodoEdit} />
             <Route path="/todos/delete" exact component={TodoDelete} />
             <Route path="/todos/show" exact component={TodoShow} />

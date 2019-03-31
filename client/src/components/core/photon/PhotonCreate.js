@@ -1,5 +1,7 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
+import { createPhotons } from '../../../actions/index';
 
 class PhotonCreate extends React.Component {
 
@@ -25,8 +27,8 @@ class PhotonCreate extends React.Component {
         );
     }
 
-    onSubmit(formValues) {
-        console.log(formValues);
+    onSubmit = (formValues) => {
+        this.props.createPhotons(formValues);
     }
 
     render() {
@@ -53,7 +55,9 @@ const validate = (formValues) => {
     return errors;
 };
 
-export default reduxForm({
+const formWrapped = reduxForm({
     form: 'photonCreate',
     validate
 })(PhotonCreate);
+
+export default connect(null, { createPhotons })(formWrapped);
