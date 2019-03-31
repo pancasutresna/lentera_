@@ -1,0 +1,27 @@
+{
+  "photons": [
+    {
+      "title": "My Photon",
+      "description": "This is a great photon",
+      "id": 1
+    },
+    {
+      "title": "Other Photon",
+      "description": "Here is some photon",
+      "creatorId": "116606027401519979513",
+      "id": 2
+    },
+    {
+      "title": "New Photon",
+      "description": "This is another photon with creatorId",
+      "creatorId": "116606027401519979513",
+      "id": 3
+    },
+    {
+      "title": "Unexpected Behavior",
+      "description": "Did not expect that",
+      "creatorId": "116606027401519979513",
+      "id": 4
+    }
+  ]
+}
