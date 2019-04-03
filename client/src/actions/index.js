@@ -1,4 +1,5 @@
 import photons from '../apis/core/photons';
+import history from '../components/core/history/history';
 import {
     SIGN_IN,
     SIGN_OUT,
@@ -27,8 +28,7 @@ export const createPhotons = formValues => async (dispatch, getState) => {
     const response = await photons.post('/photons', { ...formValues, creatorId: userId });
 
     dispatch({ type: CREATE_PHOTON, payload: response.data });
-    // Do some programatic navigation to get the user back to the root route
-
+    history.push('/');
 };
 
 export const fetchPhotons = () => async dispatch => {
@@ -44,9 +44,10 @@ export const fetchPhoton = (id) => async dispatch => {
 };
 
 export const editPhoton = (id, formValues) => async dispatch => {
-    const response = await photons.put(`/photons/${id}`, formValues);
+    const response = await photons.patch(`/photons/${id}`, formValues);
 
     dispatch({ type: EDIT_PHOTON, payload: response.data });
+    history.push('/');
 };
 
 export const deletePhoton = (id) => async dispatch => {

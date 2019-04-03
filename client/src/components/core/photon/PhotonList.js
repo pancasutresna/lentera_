@@ -13,8 +13,8 @@ class PhotonList extends React.Component {
         if (photon.creatorId === this.props.currentUserId) {
             return (
                 <div className="right floated content">
-                    <button className="ui button primary">Edit</button>
-                    <button className="ui button negative">Delete</button>
+                    <Link to={`/photons/edit/${photon.id}`} className="ui button primary">Edit</Link>
+                    <Link to={`/photons/delete/${photon.id}`} className="ui button negative">Delete</Link>
                 </div>
             );
         }

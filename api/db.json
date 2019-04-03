@@ -12,15 +12,14 @@
       "id": 2
     },
     {
-      "title": "New Photon",
-      "description": "This is another photon with creatorId",
+      "title": "The New old Photon",
+      "description": "This change was made using patch request",
       "creatorId": "116606027401519979513",
       "id": 3
     },
     {
-      "title": "Unexpected Behavior",
-      "description": "Did not expect that",
-      "creatorId": "116606027401519979513",
+      "title": "Me Using Photon Component Reuse",
+      "description": "This photon is about refactored",
       "id": 4
     }
   ]
