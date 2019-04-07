@@ -6,18 +6,6 @@
       "id": 1
     },
     {
-      "title": "Other Photon",
-      "description": "Here is some photon",
-      "creatorId": "116606027401519979513",
-      "id": 2
-    },
-    {
-      "title": "The New old Photon",
-      "description": "This change was made using patch request",
-      "creatorId": "116606027401519979513",
-      "id": 3
-    },
-    {
       "title": "Me Using Photon Component Reuse",
       "description": "This photon is about refactored",
       "id": 4

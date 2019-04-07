@@ -54,4 +54,5 @@ export const deletePhoton = (id) => async dispatch => {
     await photons.delete(`/photons/${id}`);
 
     dispatch({ type: DELETE_PHOTON, payload: id });
+    history.push('/');
 };

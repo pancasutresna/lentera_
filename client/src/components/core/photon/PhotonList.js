@@ -27,7 +27,7 @@ class PhotonList extends React.Component {
                     {this.renderAdmin(photon)}
                     <i className="large middle aligned icon camera" />
                     <div className="content">
-                        {photon.title}
+                        <Link to={`/photons/${photon.id}`} className="header">{photon.title}</Link>
                         <div className="description">
                             {photon.description}
                         </div>
