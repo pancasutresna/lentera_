@@ -1,5 +1,6 @@
 import photons from '../apis/core/photons';
 import history from '../components/core/history/history';
+import axios from 'axios';
 import {
     SIGN_IN,
     SIGN_OUT,
@@ -7,7 +8,9 @@ import {
     FETCH_PHOTONS,
     FETCH_PHOTON,
     DELETE_PHOTON,
-    EDIT_PHOTON
+    EDIT_PHOTON,
+    SAVE_COMMENT,
+    FETCH_COMMENTS
 } from './types';
 
 export const signIn = (userId) => {
@@ -55,4 +58,20 @@ export const deletePhoton = (id) => async dispatch => {
 
     dispatch({ type: DELETE_PHOTON, payload: id });
     history.push('/');
+};
+
+export function saveComment(comment) {
+    return {
+        type: SAVE_COMMENT,
+        payload: comment
+    };
+};
+
+export function fetchComments() {
+    const response = axios.get('http://jsonplaceholder.typicode.com/comments');
+
+    return {
+        type: FETCH_COMMENTS,
+        payload: response
+    };
 };

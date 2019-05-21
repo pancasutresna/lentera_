@@ -7,6 +7,7 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "lodash": "^4.17.11",
+    "moxios": "^0.4.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-redux": "^6.0.1",
@@ -14,6 +15,7 @@
     "react-scripts": "1.1.4",
     "redux": "^4.0.1",
     "redux-form": "^8.1.0",
+    "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0"
   },
   "scripts": {

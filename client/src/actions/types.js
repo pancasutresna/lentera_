@@ -5,3 +5,6 @@ export const FETCH_PHOTONS = 'FETCH_PHOTONS';
 export const FETCH_PHOTON = 'FETCH_PHOTON';
 export const DELETE_PHOTON = 'DELETE_PHOTON';
 export const EDIT_PHOTON = 'EDIT_PHOTON';
+
+export const SAVE_COMMENT = 'SAVE_COMMENT';
+export const FETCH_COMMENTS = 'FETCH_COMMENTS';
